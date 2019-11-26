@@ -12,8 +12,12 @@ Vue.use(VueRouter)
 import router from "./router.js"
 
 //导入mint-ui组件
-import {Header} from"mint-ui"
-Vue.component(Header.name,Header)
+import {
+    Header,Swipe,SwipeItem
+} from "mint-ui"
+Vue.component(Swipe.name,Swipe)
+Vue.component(SwipeItem.name,SwipeItem)
+Vue.component(Header.name, Header)
 
 //导入MUI的样式
 import "./lib/mui/css/mui.min.css"
@@ -22,8 +26,8 @@ import "./lib/mui/css/icons-extra.css"
 //导入App组件
 import app from "./App.vue"
 
-var vm=new Vue({
-    el:"#app",
-    render:c=>c(app),
-    router//4.挂载路由对象到VM实例对象中
+var vm = new Vue({
+    el: "#app",
+    render: c => c(app),
+    router //4.挂载路由对象到VM实例对象中
 })
