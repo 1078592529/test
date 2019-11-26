@@ -7,7 +7,7 @@
       <mt-swipe-item>3</mt-swipe-item>
     </mt-swipe>
     
-    <!-- 九宫格 到 6宫格 的改造工程 -->
+        <!-- 九宫格 到 6宫格 的改造工程 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
               <img src="../../images/menu1.png" alt="">
@@ -28,6 +28,7 @@
               <img src="../../images/menu6.png" alt="">
               <div class="mui-media-body">联系我们</div></a></li>
   </ul> 
+
  
   </div>
 </template>
