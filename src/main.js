@@ -11,6 +11,7 @@ Vue.use(VueRouter)
 //3.导入自己的router.js路由模块
 import router from "./router.js"
 
+
 //导入mint-ui组件
 import {
     Header,Swipe,SwipeItem

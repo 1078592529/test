@@ -3,7 +3,11 @@
     <!-- 顶部Header区域 -->
     <mt-header fixed title="固定在顶部"></mt-header>
     <!-- 中间的路由router-view区域 -->
-    <router-view></router-view>
+<transition>
+  <router-view></router-view>
+</transition>
+
+  
 	
 
 
