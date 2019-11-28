@@ -1,17 +1,21 @@
 <template>
   <div>
+
     <!-- 轮播图区域 -->
     <mt-swipe :auto="4000">
-      <mt-swipe-item>1</mt-swipe-item>
-      <mt-swipe-item>2</mt-swipe-item>
-      <mt-swipe-item>3</mt-swipe-item>
+      <!-- 在组件中，使用v-for循环的话，一定要使用 key -->
+      <mt-swipe-item v-for="item in lunbotuList" :key="item.url">
+        <img :src="item.img" alt="">
+      </mt-swipe-item>
     </mt-swipe>
-    
-        <!-- 九宫格 到 6宫格 的改造工程 -->
+
+
+    <!-- 九宫格 到 6宫格 的改造工程 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
-      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+      <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+        <router-link to="/home/newslist">
               <img src="../../images/menu1.png" alt="">
-              <div class="mui-media-body">新闻资讯</div></a></li>
+              <div class="mui-media-body">新闻资讯</div></router-link></li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
               <img src="../../images/menu2.png" alt="">
               <div class="mui-media-body">图片分享</div></a></li>
@@ -29,12 +33,37 @@
               <div class="mui-media-body">联系我们</div></a></li>
   </ul> 
 
- 
   </div>
 </template>
 
 <script>
-export default {};
+import { Toast } from "mint-ui";
+
+export default {
+  data() {
+    return {
+      lunbotuList: [] // 保存轮播图的数组
+    };
+  },
+  created() {
+    this.getLunbotu();
+  },
+  methods: {
+    getLunbotu() {
+      // 获取轮播图数据的方法
+      this.$http.get("api/getlunbo").then(result => {
+        // console.log(result.body);
+        if (result.body.status === 0) {
+          // 成功了
+          this.lunbotuList = result.body.message;
+        } else {
+          // 失败的
+          Toast("加载轮播图失败。。。");
+        }
+      });
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -67,7 +96,7 @@ export default {};
     height: 60px;
   }
 
-  .mui-media-body{
+  .mui-media-body {
     font-size: 13px;
   }
 }

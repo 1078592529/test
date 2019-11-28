@@ -11,6 +11,13 @@ Vue.use(VueRouter)
 //3.导入自己的router.js路由模块
 import router from "./router.js"
 
+// 4. 导入 vue-resource
+import VueResource from 'vue-resource'
+// 4.1 安装 vue-resource
+Vue.use(VueResource)
+//设置请求根路径
+Vue.http.options.root = 'http://www.liulongbin.top:3005';
+
 
 //导入mint-ui组件
 import {
