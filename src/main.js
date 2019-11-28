@@ -15,8 +15,18 @@ import router from "./router.js"
 import VueResource from 'vue-resource'
 // 4.1 安装 vue-resource
 Vue.use(VueResource)
+
 //设置请求根路径
 Vue.http.options.root = 'http://www.liulongbin.top:3005';
+
+
+//导入时间格式化插件
+import moment from "moment" 
+
+//定义全局过滤器
+Vue.filter("dataFormat",function(dataStr,pattern="YYYY-MM-DD HH:mm:ss"){
+    return moment(dataStr).format(pattern)
+})
 
 
 //导入mint-ui组件
@@ -33,6 +43,7 @@ import "./lib/mui/css/icons-extra.css"
 
 //导入App组件
 import app from "./App.vue"
+import { IPv4 } from "ipaddr.js";
 
 var vm = new Vue({
     el: "#app",
