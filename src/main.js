@@ -24,9 +24,10 @@ Vue.http.options.root = 'http://www.liulongbin.top:3005';
 import moment from "moment" 
 
 //定义全局过滤器
-Vue.filter("dataFormat",function(dataStr,pattern="YYYY-MM-DD HH:mm:ss"){
+Vue.filter('dateFormat',function (dataStr, pattern = "YYYY-MM-DD HH:mm:ss"){
     return moment(dataStr).format(pattern)
 })
+
 
 
 //导入mint-ui组件
