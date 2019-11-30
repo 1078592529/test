@@ -1,15 +1,12 @@
 <template>
-    <div>
-        SearchContainer
-    </div>
+  <div>
+    <h3>SearchContainer</h3>
+  </div>
 </template>
 
 <script>
-export default {
-    
-}
 </script>
 
-<style lang="" scoped>
-    
+<style lang="scss" scoped>
+
 </style>
