@@ -27,6 +27,9 @@ import './lib/mui/css/mui.min.css'
 // 导入扩展图标样式
 import './lib/mui/css/icons-extra.css'
 
+//导入全局样式
+import './lib/css/global.css'
+
 
 // 按需导入 Mint-UI 中的组件   
 /* import { Header, Swipe, SwipeItem, Button, Lazyload } from 'mint-ui'
@@ -40,7 +43,9 @@ Vue.use(MintUI)
 import 'mint-ui/lib/style.css'
 
 
-
+// 安装 图片预览插件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 
 // 1.3 导入自己的 router.js 路由模块

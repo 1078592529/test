@@ -54,6 +54,7 @@ export default {
           result.body.message.forEach(item => {
             item.w = 600;
             item.h = 400;
+            item.msrc=item.msrc;
           });
           // 把完整的数据保存到 list 中
           this.list = result.body.message;

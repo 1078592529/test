@@ -1,12 +1,9 @@
 {
   "presets": ["env", "stage-0"],
-  "plugins": ["transform-runtime", ["component", [
+  "plugins": [["component", [
     {
       "libraryName": "mint-ui",
       "style": true
     }
-  ]]],
-  "ignore": [
-     "./src/"
-     ]
+  ]], "transform-remove-strict-mode"]
 }
