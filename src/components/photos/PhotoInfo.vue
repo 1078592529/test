@@ -6,11 +6,18 @@
       <span>点击：{{ photoinfo.click }}次</span>
     </p>
 
-    <hr>
+    <hr />
 
     <!-- 缩略图区域 -->
     <div class="thumbs">
-      <img class="preview-img" v-for="(item, index) in list" :src="item.src" height="100" @click="$preview.open(index, list)" :key="item.src">
+      <img
+        class="preview-img"
+        v-for="(item, index) in list"
+        :src="item.src"
+        height="100"
+        @click="$preview.open(index, list)"
+        :key="item.src"
+      />
     </div>
 
     <!-- 图片内容区域 -->
@@ -54,7 +61,7 @@ export default {
           result.body.message.forEach(item => {
             item.w = 600;
             item.h = 400;
-            item.msrc=item.msrc;
+            item.msrc = item.msrc;
           });
           // 把完整的数据保存到 list 中
           this.list = result.body.message;
@@ -89,8 +96,8 @@ export default {
     line-height: 30px;
   }
 
-  .thumbs{
-    img{
+  .thumbs {
+    img {
       margin: 10px;
       box-shadow: 0 0 8px #999;
     }

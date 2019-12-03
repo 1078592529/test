@@ -2,7 +2,7 @@
   <div class="goodsdesc-container">
     <h3>{{ info.title }}</h3>
 
-    <hr>
+    <hr />
 
     <div class="content" v-html="info.content"></div>
   </div>
@@ -41,8 +41,8 @@ export default {
     text-align: center;
     margin: 15px 0;
   }
-  .content{
-    img{
+  .content {
+    img {
       width: 100%;
     }
   }

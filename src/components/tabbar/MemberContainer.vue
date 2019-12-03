@@ -4,11 +4,10 @@
   </div>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style lang="scss" scoped>
-h3{
-  color:red;
+h3 {
+  color: red;
 }
 </style>

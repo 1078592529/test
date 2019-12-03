@@ -6,14 +6,12 @@
     <input id="test" class="mui-input-numbox" type="number" value="1" @change="countChanged" ref="numbox" />
     <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
   </div>
-
   <!-- 分析： 子组件什么时候把 数据传递给父组件 -->
   <!--  -->
 </template>
 
 <script>
 import mui from "../../lib/mui/js/mui.min.js";
-
 export default {
   mounted() {
     // 初始化数字选择框组件

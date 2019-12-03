@@ -8,7 +8,7 @@
       <span>点击：{{ newsinfo.click }}次</span>
     </p>
 
-    <hr>
+    <hr />
 
     <!-- 内容区域 -->
     <div class="content" v-html="newsinfo.content"></div>
